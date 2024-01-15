@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="css/currency.css">
+</head>
+<body>
+
+  <h1>Currency Converter</h1>
+
+  <form id="currencyConverter">
+    <label for="fromCurrency" class="uppercase">From Currency:</label>
+    <select id="fromCurrency"  class="uppercase" required></select>
+
+    <br>
+
+    <label for="amount" class="uppercase">Amount:</label>
+    <input type="number" id="amount" min="0.01" step="0.01" required>
+
+    <br>
+
+    <label for="toCurrency" class="uppercase">To Currency:</label>
+    <select id="toCurrency" class="uppercase" required></select>
+
+    <br><br>
+
+    <button type="button" onclick="convertCurrency()">Convert</button>
+  </form>
+
+  <h3>Result:</h3>
+  <p id="result">Converted amount will be displayed here</p>
+
+  <script src="scripts/currency.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fuel Price Chart</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div id="chart-container">
+    <canvas id="fuelChart"></canvas>
+  </div>
+
+  <div id="controls">
+    <button onclick="scrollBackward()">Backward</button>
+    <button onclick="scrollForward()">Forward</button>
+    <label for="mode">Mode:</label>
+    <select id="mode" onchange="changeMode()">
+      <option value="historical">Historical</option>
+      <option value="forecast">Forecast</option>
+    </select>
+    <label for="fuelType">Fuel Type:</label>
+    <select id="fuelType" onchange="filterChart()">
+      <option value="all">All</option>
+      <option value="D7DV">Liquid Fuels</option>
+      <option value="D7DW">Solid Fuels</option>
+      <option value="D7DU">Gas</option>
+      <option value="D7DT">Electricity</option>
+    </select>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="scripts/script.js"></script>
+</body>
+</html>
